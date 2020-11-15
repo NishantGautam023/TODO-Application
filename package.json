@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/NishantGautam023/TODO-Application#readme",
   "dependencies": {
+    "ejs": "^3.1.5",
     "express": "^4.17.1"
   }
 }
