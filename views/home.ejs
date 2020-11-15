@@ -3,9 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <p>Welcome to the Page</p>
+    <main> 
+    <!-- component -->
+<section class="flex justify-center px-4 text-gray-100 bg-gray-800">
+    <div class="container py-6">
+        <h1 class="text-center text-lg font-bold lg:text-2xl">
+            A TODO Application
+        </h1>
+
+        <div class="flex justify-center mt-6">
+            <div class="bg-white rounded-lg">
+                <div class="flex flex-wrap justify-between md:flex-row">
+                    <input type="email" class="m-1 p-2 appearance-none text-gray-700 text-sm focus:outline-none" placeholder="Enter your Task">
+                    <button class="w-full m-1 p-2 text-sm bg-gray-800 rounded-lg font-semibold uppercase lg:w-auto">submit</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        
+    </div>
+</section>
+
+</main>
+
+     
+         
+
+<!-- **********Table Section ********************************************* -->
+
+
+<!-- component -->
+<table class="border-collapse w-full">
+    <thead>
+        <tr>
+            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell"  >Task</th>
+            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Due Date At</th>
+            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Category</th>
+            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        
+
+        <!-- ****************1st row ********************************** -->
+        <tr class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+                <td class="font-bold  text-blue-700 w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static" contentEditable="true">
+                    <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase" >Company name</span>
+                    Complete College Assignment
+                </td>
+                <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                    <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Country</span>
+                    German
+                </td>
+          	<td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Status</span>
+                <span class="">
+                    <select class="rounded bg-red-400 py-2 px-4 text-xs font-bold">
+                        <option value="">School</option>
+                        <option value="">Work</option>
+                        <option value="">Gym</option>
+                        <option value="">Entertainment</option>
+
+                    </select>
+                    
+                    
+                </span>
+          	</td>
+            <td class=" w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                    <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Actions</span>
+                    <a href="#" class="text-blue-400 hover:text-blue-600 underline">Edit</a>
+                    <a href="#" class="text-blue-400 hover:text-blue-600 underline pl-6">Delete</a>
+                    <a href="#" class="text-blue-400 hover:text-blue-600 underline pl-6">Done</a>
+            </td>
+        </tr>
+
+
+
+            <!-- **************2nd row ******** *********************************888 -->
+
+
+        <tr class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+                <td class=" font-bold  text-blue-700  w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
+                    <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Company name</span>
+                    Contribute Towards Open Source 
+                </td>
+                <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                    <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Country</span>
+                    Schweden
+                </td>
+            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Status</span>
+                <span class="">
+
+                    <select class="rounded bg-green-400 py-2 px-4 text-xs font-bold">
+                        <option value="">School</option>
+                        <option value="">Work</option>
+                        <option value="">Gym</option>
+                        <option value="">Entertainment</option>
+
+                    </select>
+                    
+
+                </span>
+            </td>
+            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                    <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Actions</span>
+                    <a href="#" class="text-blue-400 hover:text-blue-600 underline">Edit</a>
+                    <a href="#" class="text-blue-400 hover:text-blue-600 underline pl-6">Delete</a>
+                    <a href="#" class="text-blue-400 hover:text-blue-600 underline pl-6">Done</a>
+            </td>
+        </tr>
+
+
+        <!-- *******************3rd row **************************** -->
+
+        <tr class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+                <td class=" font-bold  text-blue-700 w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
+                    <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Company name</span>
+                    Do Exercise Regularly
+                </td>
+                <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                    <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Country</span>
+                    
+                </td>
+            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Status</span>
+                <span class="">
+
+                    <select class="rounded bg-yellow-400 py-2 px-4 text-xs font-bold">
+                        <option value="">School</option>
+                        <option value="">Work</option>
+                        <option value="">Gym</option>
+                        <option value="">Entertainment</option>
+
+                    </select>
+                    
+
+                </span>
+            </td>
+            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                    <span class="font-bold  text-blue-700  lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Actions</span>
+                    <a href="#" class="text-blue-400 hover:text-blue-600 underline">Edit</a>
+                    <a href="#" class="text-blue-400 hover:text-blue-600 underline pl-6">Delete</a>
+                    <a href="#" class="text-blue-400 hover:text-blue-600 underline pl-6">Done</a>
+            </td>
+        </tr>
+
+
+
+
+
+
+            <!-- ***********4th row********************** -->
+
+        <tr class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+                <td class=" font-bold  text-blue-700 w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
+                    <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Company name</span>
+                    Play CyberPunk 2077
+                </td>
+                <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                    <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Country</span>
+                    Switzerland
+                </td>
+            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Status</span>
+                <span class="">
+
+                    <select class="rounded bg-purple-400 py-2 px-4 text-xs font-bold">
+                        <option value="">School</option>
+                        <option value="">Work</option>
+                        <option value="">Gym</option>
+                        <option value="">Entertainment</option>
+
+                    </select>
+                    
+
+                </span>
+            </td>
+            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                    <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Actions</span>
+                    <a href="#" class="text-blue-400 hover:text-blue-600 underline">Edit</a>
+                    <a href="#" class="text-blue-400 hover:text-blue-600 underline pl-6">Delete</a>
+                    <a href="#" class="text-blue-400 hover:text-blue-600 underline pl-6">Done</a>
+            </td>
+        </tr>
+
+
+    </tbody>
+</table>
+
 </body>
 </html>
