@@ -1,0 +1,28 @@
+{
+  "name": "todo-application",
+  "version": "1.0.0",
+  "description": "A Todo Application built using Node Express and MOngoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NishantGautam023/TODO-Application.git"
+  },
+  "keywords": [
+    "TODO",
+    "MongoDB",
+    "Express"
+  ],
+  "author": "Nishant Gautam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NishantGautam023/TODO-Application/issues"
+  },
+  "homepage": "https://github.com/NishantGautam023/TODO-Application#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
