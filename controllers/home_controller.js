@@ -3,11 +3,20 @@ const TODO = require('../models/todo_schema')
 
 
 
+// home page 
 
-
-module.exports.load = function(req,res) {
-    return res.render('home')
-}
+module.exports.load = function (req, res) {
+    TODO.find({}, (err, list) => {
+        if (err) {
+            console.log('there is an error', err);
+            return;
+        }
+        return res.render('home.ejs', {
+            title: 'Home',
+            todo_list: list
+        })
+    });
+};
 
 // Creating our Task ..i.e put data in database
 module.exports.creating = function(req, res) {
