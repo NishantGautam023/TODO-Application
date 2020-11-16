@@ -24,7 +24,7 @@ const todoListSchema = new mongoose.Schema({
 
 //3. Naming our collection to be stored in database ,
 
-const TODO = mongoose.model('TODO',TODOSchema)
+const TODO = mongoose.model('TODO',todoListSchema)
 //1st parameter: TODO, => This would be the name in the database
 //2nd paramter: TODOSchema => defined by the schema
 

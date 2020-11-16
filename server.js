@@ -1,7 +1,8 @@
 const express = require('express');
 const port = process.env.PORT || 8848;
 const db = require('./config/mongoose')
-
+const CONTACT = require('./models/todo_schema')
+// the collection would be populated using this CONTACT ...
 
 const app = express();
 
