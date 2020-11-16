@@ -17,10 +17,11 @@ app.set('views', './views')
 
 
 // set up the static files
+app.use(express.urlencoded({  extended: true  }))
 app.use(express.static('./assets'))
 
 // use the express router
-app.use('/', require('./routes'))
+app.use('/', require('./routes/index'))
 
 
 app.listen(port, (err) => {
