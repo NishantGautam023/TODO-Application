@@ -10,8 +10,8 @@
 <body>
     
     <!-- ******The pOST request of our form will be /create-todo***********  
-        thus importing this in our router
-    -->
+        -- thus importing this in our router -->
+    
     <main> 
 
     
@@ -26,7 +26,7 @@
                 <div class="flex justify-center mt-6">
                     <div class="bg-white rounded-lg">
                         <div class="flex flex-wrap justify-between md:flex-row">
-                            <input type="text" class="m-1 p-2 appearance-none text-gray-700 text-sm focus:outline-none" name="task" placeholder="Enter your Task">
+                            <input type="text" class="m-1 p-2 appearance-none text-gray-700 text-sm focus:outline-none"  placeholder="Enter your Task">
                             <button class="w-full m-1 p-2 text-sm bg-gray-800 rounded-lg font-semibold uppercase lg:w-auto">submit</button>
                         </div>
                     </div>
@@ -51,30 +51,32 @@
         <table class="border-collapse w-full">
             <thead>
                 <tr>
-                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell"  >Task</th>
-                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Due Date At</th>
-                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Category</th>
+                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell" name="task"  >Task</th>
+                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell" name="dueDate"  >Due Date At</th>
+                    <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell" name="category"  >Category</th>
                     <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Actions</th>
                 </tr>
             </thead>
             <tbody>
 
                         
-               
+                <% for (let i of todo_list){%>
 
 
                 <!-- ****************1st row ********************************** -->
                 <tr class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
                         <td class="font-bold  text-blue-700 w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static" contentEditable="true">
                            
-                            The Task goes here 
+                            <%=i.task%>
                         </td>
                         <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
                             
-                            <input type="date"  value="2020-07-22"  min="2020-01-01" max="2023-12-31">
+                            <input type="date" name="date" value="2020-07-22"  min="2020-01-01" max="2023-12-31" 
+                            <%=i.date.toDateString
+                            %>
                         </td>
                     <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
-                            <select class="rounded bg-red-400 py-2 px-4 text-xs font-bold">
+                            <select class="rounded bg-red-400 py-2 px-4 text-xs font-bold" <%=i.category%> >
                                 <option value="">School</option>
                                 <option value="">Work</option>
                                 <option value="">Gym</option>
@@ -89,6 +91,7 @@
                             <a href="#" class="text-blue-400 hover:text-blue-600 underline pl-6">Done</a>
                     </td>
                 </tr>
+                <%}%>
             </tbody>
         </table>
 
@@ -97,18 +100,20 @@
 
 </main>
 
-<footer class="name-center">
-  
-    <p class="inline-flex text-blue-500 px-2 pt-6 text-blue-500" >
-        Built with 
-        <svg fill="#e53e3e" viewBox="0 0 24 24"  class="w-5 h-5 mx-1 pt-px text-red-600 " stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-        </svg>by Nishant Gautam.
-    </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-
-</footer>
-
 
 
 

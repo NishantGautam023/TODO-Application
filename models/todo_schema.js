@@ -9,16 +9,16 @@ const todoListSchema = new mongoose.Schema({
      // Defining our fields
      task: {
          type: String,
-         required: true,  // putting validation
+         required: true  // putting validation
      },
      dueDate: {
          type:Date,
-         required: true,
+         required: true
      },
      category: {
          type: String,
-         required: true,
-     },   
+         required: true
+     }   
      
 });
 

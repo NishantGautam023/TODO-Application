@@ -11,18 +11,18 @@ module.exports.load = function (req, res) {
             console.log('there is an error', err);
             return;
         }
-        return res.render('home.ejs', {
+        return res.render('home', {
             title: 'Home',
             todo_list: list
-        })
+        })   
     });
-};
+};  
 
 // Creating our Task ..i.e put data in database
 module.exports.creating = function(req, res) {
     TODO.create( {
         task: req.body.task,
-         dueDate: req.body.date,
+         dueDate: req.body.dueDate,
          category: req.body.category,
     },
     // whenever we create something we need, to callback a function which tells 
