@@ -26,8 +26,8 @@
                 <div class="flex justify-center mt-6">
                     <div class="bg-white rounded-lg">
                         <div class="flex flex-wrap justify-between md:flex-row">
-                            <input type="text" class="m-1 p-2 appearance-none text-gray-700 text-sm focus:outline-none"  placeholder="Enter your Task">
-                            <button class="w-full m-1 p-2 text-sm bg-gray-800 rounded-lg font-semibold uppercase lg:w-auto">submit</button>
+                            <input type="text" class="m-1 p-2 appearance-none text-gray-700 text-sm focus:outline-none" name="task"  placeholder="Enter your Task">
+                            <input class="w-full m-1 p-2 text-sm bg-gray-800 rounded-lg font-semibold uppercase lg:w-auto" type="submit" value="submit">
                         </div>
                     </div>
                 </div>
@@ -59,24 +59,25 @@
             </thead>
             <tbody>
 
-                        
-                <% for (let i of todo_list){%>
+                                         
+                          
 
 
                 <!-- ****************1st row ********************************** -->
                 <tr class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
                         <td class="font-bold  text-blue-700 w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static" contentEditable="true">
-                           
-                            <%=i.task%>
+                           Sample
+                            
                         </td>
                         <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
                             
                             <input type="date" name="date" value="2020-07-22"  min="2020-01-01" max="2023-12-31" 
-                            <%=i.date.toDateString
-                            %>
+                                    
+                                   
+                            
                         </td>
                     <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
-                            <select class="rounded bg-red-400 py-2 px-4 text-xs font-bold" <%=i.category%> >
+                            <select class="rounded bg-red-400 py-2 px-4 text-xs font-bold" name="category">
                                 <option value="">School</option>
                                 <option value="">Work</option>
                                 <option value="">Gym</option>
@@ -91,22 +92,17 @@
                             <a href="#" class="text-blue-400 hover:text-blue-600 underline pl-6">Done</a>
                     </td>
                 </tr>
-                <%}%>
+             
             </tbody>
         </table>
 
 
+        <p><%= list %></p>
+
 </form>
 
 </main>
-
-
-
-
-
-
-
-
+ 
 
 
 
